@@ -64,7 +64,7 @@
                                     <a href="{{ url('/identificar') }}">IDENTIFICAR</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/proteger8') }}">PROTEGER</a>
+                                    <a href="{{ url('/proteger') }}">PROTEGER</a>
                                 </li>
 
                                 <li>

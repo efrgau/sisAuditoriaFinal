@@ -77,7 +77,7 @@
                             <div class="register-link">
                                 <p>
                                 ¿No tienes cuenta? 
-                                    <a href="/register"> Registrate aquí</a>
+                                    <a href="{{ route('registraUsuario') }}"> Registrate aquí</a>
                                 </p>
                             </div>
                         </div>

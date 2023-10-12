@@ -73,7 +73,7 @@
                     <div class="image img-cir img-120">
                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                     </div>
-                    <h4 class="name">Richard Mosquera</h4>
+                    <h4 class="name">Richard Mosquera P.</h4>
                     <a href="#">Cerrar sesión </a>
                 </div>
 

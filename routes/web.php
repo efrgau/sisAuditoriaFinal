@@ -19,14 +19,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/register',[RegisterController::class,'register']);
-
+## TO DO
+#EDWIN ṔACHECO FIGUEROA 
+# Rutas para el manejo de logueo, registro y reseteo de contraseña del sistema
 Route::get('/',[LoginController::class,'show']);
 Route::post('/login',[LoginController::class,'login']);
 
-Route::get('/home',[HomeController::class,'index']);
+#Registro de usuarios en el sistema con espera de aprobación.
+Route::get('/registrarUsuario', [RegisterController::class,'registraUsuario'])->name('registraUsuario');
 
-Route::get('/logout',[LogoutController::class,'logout']);
+#Registra un nuevo usuario en el sistema para aprobación
+Route::post('/register',[RegisterController::class,'register']);
+
+
+Route::get('/home',[HomeController::class,'index'])->name('inicio');
+
+Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
 
 Route::get('/empresa',[EmpresaController::class,'index']);
 

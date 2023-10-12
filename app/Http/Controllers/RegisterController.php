@@ -9,13 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function show()
+    public function registraUsuario()
     {
-        if(Auth::check())
+        /*if(Auth::check())
         {
             return redirect('/home');
-        }
-        return view('auth.register');
+        }*/
+        return view('auth/register');
+        echo "sale algo";
     }
 
     public function register(RegisterRequest $resquest) 

@@ -1,3 +1,4 @@
+@extends('layout.app-master')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
   <meta name="keywords" content="au theme template">
 
   <!-- Title Page-->
-  <title>Badge</title>
+  <title>prueba</title>
 
   <!-- Fontfaces CSS-->
   <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -37,125 +38,8 @@
 
 <body class="animsition">
   <div class="page-wrapper">
-  
+  {{ @layou }}
 
-    <!-- MENU SIDEBAR-->
-    <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
-                </a>
-                
-            </div>
-            <div class="menu-sidebar2__content js-scrollbar1">
-                <div class="account2">
-                    <div class="image img-cir img-120">
-                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                    </div>
-                    <h4 class="name">Richard Mosquera</h4>
-                    <a href="#">Cerrar sesión </a>
-                </div>
-           
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                    <li>
-                            <a href="{{ url('/HOMEISO') }}">
-                                <i class="fas fa-chart-bar"></i>  HOMEISO-IT</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>iSO 27032</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                <a href="{{ url('/identificar') }}">IDENTIFICAR</a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="{{ url('/proteger') }}">PROTEGER</a>
-                                </li>
-
-                                <li>
-                                  <a href="{{ url('/detecter') }}">DETECTAR</a>
-                            </li>
-                                <li>
-                                     <a href="{{ url('/responder') }}">RESPONDER</a>
-                                </li>
-                                <li>
-                                     <a href="{{ url('/recuperar') }}">RECUPERAR</a>
-                                </li>
-                            </ul>
-                        </li>
-                     
-                      
-                        
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>REGISTRO USUARIOS</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">INGRESO</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">REGISTRAR</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">OLVIDO DE CLAVE</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>INFORME EVALUACION</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                            <li>
-                                
-                                <a href="{{ url('/identificar') }}">IDENTIFICAR</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/proteger8') }}">PROTEGER</a>
-                            </li>
-
-                            <li>
-                                  <a href="{{ url('/detectar8') }}">DETECTAR</a>
-                            </li>
-                            <li>
-                                 <a href="{{ url('/responder8') }}">RESPONDER</a>
-                            </li>
-                            <li>
-                                 <a href="{{ url('/recuperar') }}">RECUPERAR</a>
-                            </li>
-                            <li>
-                                 <a href="{{ url('/informegeneral') }}">INFORME GENERAL</a>
-                            </li>
-                            </ul>
-                        </li>
-                        
-                        
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>AYUDA</a>
-                                
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                <a href="{{ url('/ayuda') }}">Politicas de seguridad </a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">contactenos</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Manual</a>
-                                </li>
-                               
-                               
-                              
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-    <!-- END MENU SIDEBAR-->
 
     <!-- PAGE CONTAINER-->
     <div class="page-container">

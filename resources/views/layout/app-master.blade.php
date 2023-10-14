@@ -53,7 +53,9 @@
                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                 </div>
                 <h4 class="name">{{ Auth::user()->name }}</h4>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar sesión </a>
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar sesión
+                </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -198,7 +200,7 @@
                                         </div>
                                         <div class="account-dropdown__body">
                                             <div class="account-dropdown__item">
-                                                <a href="#">
+                                                <a href="{{ route('editarPerfil') }}">
                                                     <i class="zmdi zmdi-account"></i>Cuenta</a>
                                             </div>
                                             <div class="account-dropdown__item">
@@ -208,7 +210,8 @@
 
                                         </div>
                                         <div class="account-dropdown__footer">
-                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <a href="{{ route('logout') }}"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                 <i class="zmdi zmdi-power"></i>Cerrar sesion</a>
                                         </div>
                                     </div>
@@ -222,7 +225,16 @@
         </header>
 
         <!-- HEADER DESKTOP-->
-        @yield('content')
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>

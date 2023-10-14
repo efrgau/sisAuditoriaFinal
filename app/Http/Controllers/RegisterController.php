@@ -21,13 +21,6 @@ class RegisterController extends Controller
     public function register(RegisterRequest $resquest) 
     {
         $user = User::create($resquest->validated());
-        return redirect('/login')->with('success', 'Account created successfully');
+        return redirect('/login')->with('success', 'Cuenta creada satisfactoriamente!');
     }
-    #GET
-    public function editProfile($id){
-        $user = User::find($id);
-        return Route::view('/editarPerfil', 'userProfile');
-    }
-    #POST
-
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\user\UserController;
 
 
 /*
@@ -22,38 +23,38 @@ use App\Http\Controllers\RegisterController;
 #EDWIN ṔACHECO FIGUEROA 
 
 # Rutas para el manejo de logueo, registro y reseteo de contraseña del sistema
-Route::get('/',[LoginController::class,'show']);
-Route::post('/login',[LoginController::class,'login']);
+Route::get('/', [LoginController::class, 'show']);
+Route::post('/login', [LoginController::class, 'login']);
 
 ## INICIO DE LA APLICACIÓN AUTENTICADO
-Route::get('/home',[HomeController::class,'index'])->name('inicio');
+Route::get('/home', [HomeController::class, 'index'])->name('inicio');
 
 ## ROUTING A MODULO USUARIOS
 #Registro de usuarios en el sistema con espera de aprobación.
-Route::get('/registrarUsuario', [RegisterController::class,'registraUsuario'])->name('registraUsuario');
+Route::get('/registrarUsuario', [RegisterController::class, 'registraUsuario'])->name('registraUsuario');
 #Registra un nuevo usuario en el sistema para aprobación
-Route::post('/register',[RegisterController::class,'register']);
+Route::post('/register', [RegisterController::class, 'register']);
 #Salida del usuario del logout
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 #Editar Perfil del usuario
 Route::get('/editarPerfil', [UserController::class, 'editProfile'])->name('editarPerfil');
 
 
-Route::get('/empresa',[EmpresaController::class,'index']);
+Route::get('/empresa', [EmpresaController::class, 'index']);
 
-Route::get('/identificar',[IsoController::class,'identificar']);
-
-
-Route::get('/proteger',[IsoController::class,'proteger']);
-
-Route::get('/detectar',[IsoController::class,'detectar']);
+Route::get('/identificar', [IsoController::class, 'identificar']);
 
 
-Route::get('/responder',[IsoController::class,'responder']);
+Route::get('/proteger', [IsoController::class, 'proteger']);
 
-Route::get('/recuperar',[IsoController::class,'recuperar']);
+Route::get('/detectar', [IsoController::class, 'detectar']);
 
-Route::get('/ayuda',[AyudaController::class,'ayuda']);
+
+Route::get('/responder', [IsoController::class, 'responder']);
+
+Route::get('/recuperar', [IsoController::class, 'recuperar']);
+
+Route::get('/ayuda', [AyudaController::class, 'ayuda']);
 
 
 
@@ -103,4 +104,3 @@ Route::get('/HOMEISO', function () {
 Route::get('/informegeneral', function () {
     return view('informegeneral');
 });
-

@@ -16,7 +16,6 @@ class RegisterController extends Controller
             return redirect('/home');
         }*/
         return view('auth/register');
-        echo "sale algo";
     }
 
     public function register(RegisterRequest $resquest) 
@@ -24,4 +23,11 @@ class RegisterController extends Controller
         $user = User::create($resquest->validated());
         return redirect('/login')->with('success', 'Account created successfully');
     }
+    #GET
+    public function editProfile($id){
+        $user = User::find($id);
+        return Route::view('/editarPerfil', 'userProfile');
+    }
+    #POST
+
 }

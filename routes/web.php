@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\EmpresaController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\IsoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,22 +20,23 @@ use Illuminate\Support\Facades\Route;
 
 ## TO DO
 #EDWIN ṔACHECO FIGUEROA 
+
 # Rutas para el manejo de logueo, registro y reseteo de contraseña del sistema
 Route::get('/',[LoginController::class,'show']);
 Route::post('/login',[LoginController::class,'login']);
 
-#Registro de usuarios en el sistema con espera de aprobación.
-Route::get('/registrarUsuario', [RegisterController::class,'registraUsuario'])->name('registraUsuario');
-
-#Registra un nuevo usuario en el sistema para aprobación
-Route::post('/register',[RegisterController::class,'register']);
-
-
+## INICIO DE LA APLICACIÓN AUTENTICADO
 Route::get('/home',[HomeController::class,'index'])->name('inicio');
 
-//Route::post('/logout',[LogoutController::class,'logout'])->name('logout');
+## ROUTING A MODULO USUARIOS
+#Registro de usuarios en el sistema con espera de aprobación.
+Route::get('/registrarUsuario', [RegisterController::class,'registraUsuario'])->name('registraUsuario');
+#Registra un nuevo usuario en el sistema para aprobación
+Route::post('/register',[RegisterController::class,'register']);
+#Salida del usuario del logout
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
-
+#Editar Perfil del usuario
+Route::get('/editarPerfil', [UserController::class, 'editProfile'])->name('editarPerfil');
 
 
 Route::get('/empresa',[EmpresaController::class,'index']);

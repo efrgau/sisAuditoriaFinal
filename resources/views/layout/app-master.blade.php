@@ -63,8 +63,23 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>.: Gestión Usuarios :.</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="login.html">INGRESO</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">REGISTRAR</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">OLVIDO DE CLAVE</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li>
-                            <a href="{{ url('/HOMEISO') }}">
+                            <a href="#">
                                 <i class="fas fa-chart-bar"></i> HOMEISO-IT</a>
                         </li>
                         <li class="has-sub">
@@ -87,24 +102,6 @@
                                 </li>
                                 <li>
                                     <a href="{{ url('/recuperar') }}">RECUPERAR</a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>REGISTRO USUARIOS</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">INGRESO</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">REGISTRAR</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">OLVIDO DE CLAVE</a>
                                 </li>
                             </ul>
                         </li>

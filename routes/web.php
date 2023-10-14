@@ -34,7 +34,10 @@ Route::post('/register',[RegisterController::class,'register']);
 
 Route::get('/home',[HomeController::class,'index'])->name('inicio');
 
-Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
+//Route::post('/logout',[LogoutController::class,'logout'])->name('logout');
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+
 
 Route::get('/empresa',[EmpresaController::class,'index']);
 

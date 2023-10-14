@@ -52,8 +52,12 @@
                 <div class="image img-cir img-120">
                     <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                 </div>
-                <h4 class="name">Consultar usuario</h4>
-                <a href="#">Cerrar sesión </a>
+                <h4 class="name">{{ Auth::user()->name }}</h4>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar sesión </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
 
             <div class="menu-sidebar__content js-scrollbar1">
@@ -179,7 +183,7 @@
                                         <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">Richard Mosquera</a>
+                                        <a class="js-acc-btn" href="#">{{ Auth::user()->name }}</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
@@ -190,9 +194,9 @@
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">Richard Mosquera</a>
+                                                    <a href="#">{{ Auth::user()->name }}</a>
                                                 </h5>
-                                                <span class="email">richardmosquera@gmail.com</span>
+                                                <span class="email">{{ Auth::user()->email }}</span>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__body">
@@ -207,7 +211,7 @@
 
                                         </div>
                                         <div class="account-dropdown__footer">
-                                            <a href="#">
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                 <i class="zmdi zmdi-power"></i>Cerrar sesion</a>
                                         </div>
                                     </div>

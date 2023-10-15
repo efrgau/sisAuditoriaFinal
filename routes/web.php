@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\UsersController;
 
 
 /*
@@ -38,6 +39,15 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 #Editar Perfil del usuario
 Route::get('/editarPerfil', [UserController::class, 'editProfile'])->name('editarPerfil');
+
+#Ver Lista de usuarios del sistema
+Route::get('/listaUsuarios', [UsersController::class, 'show'])->name('listaUsuarios');
+Route::get('/registrarUsuarioNuevo', [UsersController::class, 'createUserForm'])->name('registrarUsuarioNuevo');
+Route::get('/Users/VerUsuario', [UsersController::class, 'showUser'])->name('VerUsuario');
+
+
+
+
 
 
 Route::get('/empresa', [EmpresaController::class, 'index']);

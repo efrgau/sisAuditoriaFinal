@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ISO</title>
+
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>@yield('tittle')</title>
+    <title>HomeIt ISO - @yield('tittle')</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -67,18 +67,33 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>.: Gestión Usuarios :.</a>
+                                <i class="fas fa-users"></i>.: Gestión Usuarios :.</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">INGRESO</a>
+                                    <a href="{{ route('listaUsuarios') }}">Ver usuarios del sistema</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">REGISTRAR</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">OLVIDO DE CLAVE</a>
+                                    <a href="{{ route('registrarUsuarioNuevo') }}">Crear usuario</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#"><i class="fas fa-industry"></i>.: Gestión Empresas
+                                evaluadas :.</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="">Crear empresa cliente</a>
+                                </li>
+                                <li>
+                                    <a href="">Ver empresas clientes</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">
+
+                            </a>
+
                         </li>
                         <li>
                             <a href="#">
@@ -225,15 +240,10 @@
         </header>
 
         <!-- HEADER DESKTOP-->
-        <div class="main-content">
-            <div class="section__content section__content--p30">
-                <div class="container-fluid">
-                    <div class="row">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        @yield('content')
+
+
 
     </div>
     <!-- Jquery JS-->

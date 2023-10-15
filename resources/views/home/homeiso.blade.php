@@ -1,6 +1,6 @@
 @extends('layout.app-master')
 
-@section('tittle', 'Sistema de evaluación ISO 270001');
+@section('tittle', 'Sistema de información de Evaluación ISO 27032');
 
 @section('content')
     <!-- MAIN CONTENT-->
@@ -11,13 +11,11 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header">
-
                                 <small>
                                     <div class="card-header">
                                         <strong>CASA ISO 27032</strong>
                                     </div>
                                     <img src="images/icon/logo richard.jpg" alt="John Doe" />
-
                                 </small>
                             </div>
                         </div>
@@ -26,7 +24,7 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header">
-                                <strong>Politica de datos</strong>
+                                <strong>Política de datos</strong>
                             </div>
                             <div class="card-body">
                                 <p class="text-muted m-b-15">Este sitio web utiliza cookies propias y de terceros con el
@@ -60,6 +58,6 @@
                 </div>
             </div>
         </div>
-        <!-- END PAGE CONTAINER-->
-
-    @endsection
+    </div>
+    <!-- END PAGE CONTAINER-->
+@endsection

@@ -1,10 +1,14 @@
 <?php
 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+use App\Models\User;
 
-class CreateRolesUsers extends Migration
+class CreateRoles extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +17,10 @@ class CreateRolesUsers extends Migration
      */
     public function up()
     {
-        Schema::create('roles_users', function (Blueprint $table) {
-            $table->id('idRol');
-            $table->string('nombreRol');
-            $table->tinyText('Detalles');
-            $table->timestamps();
-        });
+        $role1 = Role::create(['name' => 'admin']);
+        $role2 = Role::create(['name' => 'cliente']);
+        $user = User::find(1);
+        $user->assignRole($role1);
     }
 
     /**
@@ -28,6 +30,5 @@ class CreateRolesUsers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles_users');
     }
 }

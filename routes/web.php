@@ -45,9 +45,11 @@ Route::get('/listaUsuarios', [UsersController::class, 'show'])->name('listaUsuar
 Route::get('/registrarUsuarioNuevo', [UsersController::class, 'createUserForm'])->name('registrarUsuarioNuevo');
 Route::get('/Users/VerUsuario', [UsersController::class, 'showUser'])->name('VerUsuario');
 
-
-
-
+# Resources de evaluaciones Generales
+Route::resource('factories', \App\Http\Controllers\FactoryController::class);
+Route::resource('categories', \App\Http\Controllers\CategoryController::class);
+Route::resource('valevaluations', \App\Http\Controllers\ValevaluationController::class);
+Route::resource('Evaluations', \App\Http\Controllers\EvaluationController::class);
 
 
 Route::get('/empresa', [EmpresaController::class, 'index']);

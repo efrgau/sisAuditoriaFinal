@@ -102,31 +102,47 @@
                                 <li>
                                     <a href="{{ route('valevaluations.index') }}">Crear Valores de Evaluación</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('evaluations.index') }}">Realizar Evaluación Empresa</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>INFORME EVALUACION</a>
+                                <i class="fas fa-tachometer-alt"></i>.:Realizar evaluación ISO27032:.</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-
                                     <a href="{{ url('/identificar') }}">IDENTIFICAR</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/proteger8') }}">PROTEGER</a>
-                                </li>
-
-                                <li>
-                                    <a href="{{ url('/detectar8') }}">DETECTAR</a>
+                                    <a href="{{ url('/proteger') }}">PROTEGER</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/responder8') }}">RESPONDER</a>
+                                    <a href="{{ url('/detectar') }}">DETECTAR</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/responder') }}">RESPONDER</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/recuperar') }}">RECUPERAR</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/informegeneral') }}">INFORME GENERAL</a>
+                                    <a href="{{ url('/informeEvaluacion') }}">INFORME GENERAL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>.:Informes de Resultados:.</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="{{ url('/informeEvaluacion') }}">Ver informe general</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/informeTabla') }}">Ver informe de etapas evaluadas</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/informeResultadosA') }}">Ver de factores</a>
                                 </li>
                             </ul>
                         </li>
@@ -135,7 +151,6 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-desktop"></i>AYUDA</a>
-
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="{{ url('/ayuda') }}">Politicas de seguridad </a>

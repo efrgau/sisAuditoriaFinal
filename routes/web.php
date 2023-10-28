@@ -4,10 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\informe\informeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\UsersController;
-
+use App\Http\Controllers\IsoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +50,7 @@ Route::get('/Users/VerUsuario', [UsersController::class, 'showUser'])->name('Ver
 Route::resource('factories', \App\Http\Controllers\FactoryController::class);
 Route::resource('categories', \App\Http\Controllers\CategoryController::class);
 Route::resource('valevaluations', \App\Http\Controllers\ValevaluationController::class);
-Route::resource('Evaluations', \App\Http\Controllers\EvaluationController::class);
+Route::resource('evaluations', \App\Http\Controllers\EvaluationController::class);
 
 
 Route::get('/empresa', [EmpresaController::class, 'index']);
@@ -65,6 +66,13 @@ Route::get('/detectar', [IsoController::class, 'detectar']);
 Route::get('/responder', [IsoController::class, 'responder']);
 
 Route::get('/recuperar', [IsoController::class, 'recuperar']);
+
+## INFORMES DE RESULTADOS
+
+Route::get('/informeEvaluacion', [informeController::class, 'informeGeneral']);
+Route::get('/informeTabla', [informeController::class, 'informeTabla']);
+Route::get('/informeResultadosA', [informeController::class, 'informeResultadosA']);
+
 
 Route::get('/ayuda', [AyudaController::class, 'ayuda']);
 

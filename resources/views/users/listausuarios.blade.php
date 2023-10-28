@@ -61,14 +61,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="tr-shadow">
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
-                                                @foreach ($users as $user)
+                                            @foreach ($users as $user)
+                                                <tr class="tr-shadow">
+                                                    <td>
+                                                        <label class="au-checkbox">
+                                                            <input type="checkbox">
+                                                            <span class="au-checkmark"></span>
+                                                        </label>
+                                                    </td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>
                                                         <span class="block-email">{{ $user->email }}</span>
@@ -108,8 +108,8 @@
 
                                                         </div>
                                                     </td>
-                                                @endforeach
-                                            </tr>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

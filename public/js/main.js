@@ -341,27 +341,39 @@
           datasets: [
             {
               label: "My First dataset",
-              data: [60, 40],
+              data: [20, 23, 12, 20, 25],
               backgroundColor: [
                 '#00b5e9',
-                '#fa4251'
+                '#fa4251',
+                '#ffab31',
+                '#fadd26',
+                '#0abf23'
               ],
               hoverBackgroundColor: [
                 '#00b5e9',
-                '#fa4251'
+                '#fa4251',
+                '#ffab31',
+                '#fadd26',
+                '#0abf23'
               ],
               borderWidth: [
-                0, 0
+                0, 0, 0, 0, 0
               ],
               hoverBorderColor: [
                 'transparent',
-                'transparent'
+                'transparent',
+                'transparent',
+                'transparent',
+                'transparent',
               ]
             }
           ],
           labels: [
-            'Products',
-            'Services'
+            'Identificar',
+            'Proteger',
+            'Detectar',
+            'Responder',
+            'Recuperar',
           ]
         },
         options: {

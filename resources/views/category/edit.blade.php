@@ -1,31 +1,34 @@
-@extends('layouts.app')
+@extends('layout.app-master')
 
 @section('template_title')
-    {{ __('Update') }} Category
+    Editar Categoría Actual
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <section class="content container-fluid">
+                <div class="">
+                    <div class="col-md-12">
 
-                @includeif('partials.errors')
+                        @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Category</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('categories.update', $category->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <span class="card-title">{{ __('Editar') }} Categoria Actual</span>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" action="{{ route('categories.update', $category->id) }}" role="form"
+                                    enctype="multipart/form-data">
+                                    {{ method_field('PATCH') }}
+                                    @csrf
 
-                            @include('category.form')
+                                    @include('category.form')
 
-                        </form>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-@endsection
+            </section>
+        @endsection

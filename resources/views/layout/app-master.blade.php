@@ -110,9 +110,7 @@
                                     <li>
                                         <a href="{{ route('valevaluations.index') }}">Crear Valores de Evaluación</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('evaluations.index') }}">Realizar Evaluación Empresa</a>
-                                    </li>
+
                                 </ul>
                             </li>
                             <li class="has-sub">
@@ -120,6 +118,9 @@
                                     <i class="fas fa-tachometer-alt"></i>.:Realizar evaluación ISO27032:.</a>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
+                                        <a href="{{ route('evaluations.create') }}">Realizar Evaluación Empresa</a>
+                                    </li>
+                                    <!--  <li>
                                         <a href="{{ url('/identificar') }}">IDENTIFICAR</a>
                                     </li>
                                     <li>
@@ -137,6 +138,7 @@
                                     <li>
                                         <a href="{{ url('/informeEvaluacion') }}">INFORME GENERAL</a>
                                     </li>
+                                -->
                                 </ul>
                             </li>
                             <li class="has-sub">
@@ -146,32 +148,28 @@
                                     <li>
                                         <a href="{{ url('/informeEvaluacion') }}">Ver informe general</a>
                                     </li>
+                                    <!--
                                     <li>
                                         <a href="{{ url('/informeTabla') }}">Ver informe de etapas evaluadas</a>
                                     </li>
                                     <li>
                                         <a href="{{ url('/informeResultadosA') }}">Ver de factores</a>
                                     </li>
+                                -->
                                 </ul>
                             </li>
 
 
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
-                                    <i class="fas fa-desktop"></i>AYUDA</a>
+                                    <i class="fas fa-desktop"></i>Información de ayuda</a>
                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                                     <li>
-                                        <a href="{{ url('/ayuda') }}">Politicas de seguridad </a>
+                                        <a href="{{ route('ayuda') }}">Politicas de seguridad </a>
                                     </li>
                                     <li>
-                                        <a href="badge.html">contactenos</a>
+                                        <a href="{{ route('normativa') }}">Normativas ISO 27032 </a>
                                     </li>
-                                    <li>
-                                        <a href="tab.html">Manual</a>
-                                    </li>
-
-
-
                                 </ul>
                             </li>
                         </ul>
@@ -224,11 +222,12 @@
                                                     <a href="{{ route('editarPerfil') }}">
                                                         <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
-                                                <div class="account-dropdown__item">
+                                                <!--
+                                                    <div class="account-dropdown__item">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-settings"></i>Configuracion</a>
                                                 </div>
-
+                                                -->
                                             </div>
                                             <div class="account-dropdown__footer">
                                                 <a href="{{ route('logout') }}"

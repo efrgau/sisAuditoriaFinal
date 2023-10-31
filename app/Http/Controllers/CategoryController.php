@@ -76,8 +76,9 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
+        $categoriesList = ['ISO 27001' => 'ISO 27001', 'ISO 27032' => 'ISO 27032', 'ISO 27032 V.1.0' => 'ISO 27032 V.1.0'];
 
-        return view('category.edit', compact('category'));
+        return view('category.edit', compact('category', 'categoriesList'));
     }
 
     /**

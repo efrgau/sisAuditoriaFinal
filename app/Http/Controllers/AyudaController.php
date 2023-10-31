@@ -8,7 +8,11 @@ class AyudaController extends Controller
 {
     public function ayuda()
     {
-        return view('ayuda');
+        return view('Ayuda');
+    }
+    public function descripcion()
+    {
+        return view('descripcioniso');
     }
 
     public function proteger()
@@ -20,6 +24,4 @@ class AyudaController extends Controller
     {
         return view('detectar');
     }
-
-
 }

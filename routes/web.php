@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\UsersController;
 use App\Http\Controllers\IsoController;
+use App\Http\Controllers\AyudaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +79,9 @@ Route::get('/informeTabla', [informeController::class, 'informeTabla']);
 Route::get('/informeResultadosA', [informeController::class, 'informeResultadosA']);
 
 
-Route::get('/ayuda', [AyudaController::class, 'ayuda']);
+Route::get('/ayuda', [AyudaController::class, 'Ayuda'])->name('ayuda');
+Route::get('/normativaISO', [AyudaController::class, 'descripcion'])->name('normativa');
+
 
 
 
@@ -103,9 +106,7 @@ Route::get('/menu', function () {
     return view('layoutmenu');
 });
 
-Route::get('/ayuda', function () {
-    return view('ayuda');
-});
+
 
 
 Route::get('/graficas', function () {

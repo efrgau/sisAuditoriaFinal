@@ -14,6 +14,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Guardar nueva categoría') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Guardar categoría') }}</button>
     </div>
 </div>

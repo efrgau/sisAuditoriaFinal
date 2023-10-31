@@ -1,30 +1,31 @@
-@extends('layouts.app')
+@extends('layout.app-master')
 
 @section('template_title')
-    {{ __('Create') }} Evaluation
+    {{ __('Realizar') }} Evaluación ISO 27032
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <section class="content container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
 
-                @includeif('partials.errors')
+                        @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Evaluation</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('evaluations.store') }}"  role="form" enctype="multipart/form-data">
-                            @csrf
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <span class="card-title">{{ __('REALIZAR') }} EVALUACIÓN ISO 27032</span>
+                            </div>
+                            <div class="card-body">
 
-                            @include('evaluation.form')
+                                @include('evaluation.form')
 
-                        </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 @endsection

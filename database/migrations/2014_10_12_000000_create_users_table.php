@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 class CreateUsersTable extends Migration
 {
@@ -25,9 +26,21 @@ class CreateUsersTable extends Migration
             $table->integer('Estado')->unsigned()->nullable()->default(12);
             $table->rememberToken();
             $table->timestamps();
-
         });
-        
+
+        $user1 = User::create([
+            'name' => 'Edwin Pacheco Figueroa',
+            'email' => 'pacheco2@yopmail.com',
+            'email_verified_at' => '2023-10-30 22:16:24',
+            'identification' => '32908123',
+            'avatar' => '',
+            'celular' => '310987234',
+            'password' => '123456789',
+            'Estado' => '12',
+            'remember_token' => '',
+            'created_at' => '2023-10-30 22:16:24',
+            'updated_at' => '2023-10-30 22:16:24',
+        ]);
     }
 
     /**

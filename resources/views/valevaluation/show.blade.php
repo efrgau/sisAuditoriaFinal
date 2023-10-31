@@ -21,12 +21,16 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Nombrevalorcat:</strong>
-                            {{ $valevaluation->nombreValorcat }}
+                            <strong>Subcategoryid:</strong>
+                            {{ $valevaluation->subcategoryId }}
                         </div>
                         <div class="form-group">
-                            <strong>Categoryid:</strong>
-                            {{ $valevaluation->categoryId }}
+                            <strong>Abrevalorcat:</strong>
+                            {{ $valevaluation->abrevalorcat }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Nombrevalorcat:</strong>
+                            {{ $valevaluation->nombreValorcat }}
                         </div>
 
                     </div>

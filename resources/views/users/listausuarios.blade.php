@@ -62,53 +62,55 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($users as $user)
-                                                <tr class="tr-shadow">
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>{{ $user->name }}</td>
-                                                    <td>
-                                                        <span class="block-email">{{ $user->email }}</span>
-                                                    </td>
-                                                    <td class="desc">{{ $user->identification }}</td>
-                                                    <td> {{ $user->celular }}</td>
-                                                    <td>{{ $user->created_at->format('d-m-Y h:m A') }}</td>
-                                                    <td>
-                                                        @if ($user->Estado == 1)
-                                                            <span class="status--process">Activo</span>
-                                                        @else
-                                                            <span class="status--danger">Inactivo</span>
-                                                        @endif
+                                                @if ($user)
+                                                    <tr class="tr-shadow">
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>{{ $user->name }}</td>
+                                                        <td>
+                                                            <span class="block-email">{{ $user->email }}</span>
+                                                        </td>
+                                                        <td class="desc">{{ $user->identification }}</td>
+                                                        <td> {{ $user->celular }}</td>
+                                                        <td>{{ $user->created_at->format('d-m-Y h:m A') }}</td>
+                                                        <td>
+                                                            @if ($user->Estado == 1)
+                                                                <span class="status--process">Activo</span>
+                                                            @else
+                                                                <span class="status--danger">Inactivo</span>
+                                                            @endif
 
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button type="button" class="item" title="Detalles"
-                                                                data-placement="top" data-toggle="modal"
-                                                                data-target="#largeModal{{ $user->id }}">
-                                                                <i class="zmdi zmdi-mail-send"></i>
-                                                            </button>
-                                                            <button type="button" class="item" title="Editar"
-                                                                data-placement="top" data-toggle="modal"
-                                                                data-target="#userEdit{{ $user->id }}">
-                                                                <i
-                                                                    class="zmdi
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data-feature">
+                                                                <button type="button" class="item" title="Detalles"
+                                                                    data-placement="top" data-toggle="modal"
+                                                                    data-target="#largeModal{{ $user->id }}">
+                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                </button>
+                                                                <button type="button" class="item" title="Editar"
+                                                                    data-placement="top" data-toggle="modal"
+                                                                    data-target="#userEdit{{ $user->id }}">
+                                                                    <i
+                                                                        class="zmdi
                                                         zmdi-edit"></i>
-                                                            </button>
-                                                            <button type="button" class="item" title="Eliminar"
-                                                                data-placement="top" data-toggle="modal"
-                                                                data-target="#userDelete{{ $user->id }}">
-                                                                <i
-                                                                    class="zmdi
+                                                                </button>
+                                                                <button type="button" class="item" title="Eliminar"
+                                                                    data-placement="top" data-toggle="modal"
+                                                                    data-target="#userDelete{{ $user->id }}">
+                                                                    <i
+                                                                        class="zmdi
                                                         zmdi-delete"></i>
-                                                            </button>
+                                                                </button>
 
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endif
                                             @endforeach
                                         </tbody>
                                     </table>
@@ -121,7 +123,10 @@
             </div>
         </div>
     </div>
-    @include('components.users-modals.verusuarioModal');
-    @include('components.users-modals.editar-usuario-modal');
-    @include('components.users-modals.eliminar-usuario-modal');
+    @if (Str::length($users) > 0)
+        @include('components.users-modals.verusuarioModal');
+        @include('components.users-modals.editar-usuario-modal');
+        @include('components.users-modals.eliminar-usuario-modal');
+    @endif
+
 @endsection

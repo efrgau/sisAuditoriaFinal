@@ -24,7 +24,6 @@ class User extends Authenticatable
         'identification',
         'celular',
         'password',
-        'idRol',
         'Estado'
     ];
 

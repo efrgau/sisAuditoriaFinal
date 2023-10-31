@@ -20,10 +20,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Role extends Model
 {
-    
+
     static $rules = [
-		'name' => 'required',
-		'guard_name' => 'required',
+        'name' => 'required',
+        'guard_name' => 'required',
     ];
 
     protected $perPage = 20;
@@ -33,7 +33,7 @@ class Role extends Model
      *
      * @var array
      */
-    protected $fillable = ['name','guard_name'];
+    protected $fillable = ['name', 'guard_name'];
 
 
     /**
@@ -43,7 +43,7 @@ class Role extends Model
     {
         return $this->hasOne('App\Models\ModelHasRole', 'role_id', 'id');
     }
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -51,6 +51,4 @@ class Role extends Model
     {
         return $this->hasMany('App\Models\RoleHasPermission', 'role_id', 'id');
     }
-    
-
 }

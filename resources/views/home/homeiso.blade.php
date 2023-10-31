@@ -46,13 +46,6 @@
                                         <span class="badge badge-light"></span>
                                     </button>
                             </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <img src="images/icon/iso27032.jpg" alt="John Doe" />
-
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Valevaluation;
+use App\Models\Subcategory;
 use App\Models\Evaluation;
+use App\Models\Factory;
 use Illuminate\Http\Request;
 
 /**
@@ -31,8 +35,13 @@ class EvaluationController extends Controller
      */
     public function create()
     {
+        $factory = Factory::pluck('NombreEmpresa', 'id');
+        //$categories = Category::with('subcategories')->paginate();
+        $categoryId = Category::pluck('id');
+        $categories = Category::with('subcategories.valevaluations')->find($categoryId);
+
         $evaluation = new Evaluation();
-        return view('evaluation.create', compact('evaluation'));
+        return view('evaluation.create', compact('evaluation', 'factory', 'categories'));
     }
 
     /**

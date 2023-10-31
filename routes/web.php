@@ -45,10 +45,14 @@ Route::get('/editarPerfil', [UserController::class, 'editProfile'])->name('edita
 Route::get('/listaUsuarios', [UsersController::class, 'show'])->name('listaUsuarios');
 Route::get('/registrarUsuarioNuevo', [UsersController::class, 'createUserForm'])->name('registrarUsuarioNuevo');
 Route::get('/Users/VerUsuario', [UsersController::class, 'showUser'])->name('VerUsuario');
+Route::resource('users', \App\Http\Controllers\user\UsersController::class);
+#Ver Lista de roles de usuarios del sistema
+Route::resource('roles', \App\Http\Controllers\RoleController::class);
 
 # Resources de evaluaciones Generales
 Route::resource('factories', \App\Http\Controllers\FactoryController::class);
 Route::resource('categories', \App\Http\Controllers\CategoryController::class);
+Route::resource('subcategories', \App\Http\Controllers\SubcategoryController::class);
 Route::resource('valevaluations', \App\Http\Controllers\ValevaluationController::class);
 Route::resource('evaluations', \App\Http\Controllers\EvaluationController::class);
 

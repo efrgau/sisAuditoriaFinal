@@ -1,7 +1,7 @@
 @extends('layout.app-master')
 
 @section('template_title')
-    Valevaluation
+    Listado de Valores de Subcategorias
 @endsection
 
 @section('content')
@@ -39,8 +39,9 @@
                                             <tr>
                                                 <th>No</th>
 
+                                                <th>Subcategoryid</th>
+                                                <th>Abrevalorcat</th>
                                                 <th>Nombrevalorcat</th>
-                                                <th>Categoryid</th>
 
                                                 <th></th>
                                             </tr>
@@ -50,8 +51,9 @@
                                                 <tr>
                                                     <td>{{ ++$i }}</td>
 
+                                                    <td>{{ $valevaluation->subcategoryId }}</td>
+                                                    <td>{{ $valevaluation->abrevalorcat }}</td>
                                                     <td>{{ $valevaluation->nombreValorcat }}</td>
-                                                    <td>{{ $valevaluation->categoryId }}</td>
 
                                                     <td>
                                                         <form

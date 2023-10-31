@@ -11,10 +11,14 @@ class UsersController extends Controller
 {
     public function show()
     {
-        $users = User::paginate();
+        $usuarioActual = Auth::user();
+        // Obtén todos los usuarios excepto el usuario autenticado
+        $users = User::where('id', '!=', $usuarioActual->id)->paginate();
+
         //Permite mostrarme todos los usuarios del sistema como administrador
         return view('users.listausuarios', compact('users'));
     }
+
     public function showUser($id)
     {
         $users = User::find($id);
@@ -26,8 +30,14 @@ class UsersController extends Controller
         return view('users.registrousuario');
         //Permite crear un usuario teniendo permisos de administrador
     }
-    public function createUser()
+    public function store(Request $request)
     {
+        //request()->validate(Subcategory::$rules);
+
+        $user = User::create($request->all());
+
+        return redirect()->route('components.users.verusuario')
+            ->with('success', 'Subcategory created successfully.');
     }
     public function updateUser()
     {

@@ -10,6 +10,10 @@ class IsoController extends Controller
     {
         return view('evaluaciones.identificar');
     }
+    public function identificarStore()
+    {
+        return view('evaluaciones.identificar');
+    }
 
     public function proteger()
     {

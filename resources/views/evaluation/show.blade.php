@@ -21,6 +21,10 @@
                     <div class="card-body">
                         
                         <div class="form-group">
+                            <strong>Factoryid:</strong>
+                            {{ $evaluation->factoryId }}
+                        </div>
+                        <div class="form-group">
                             <strong>Valevaluationid:</strong>
                             {{ $evaluation->valEvaluationId }}
                         </div>

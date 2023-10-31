@@ -2,14 +2,19 @@
     <div class="box-body">
         
         <div class="form-group">
+            {{ Form::label('subcategoryId') }}
+            {{ Form::text('subcategoryId', $valevaluation->subcategoryId, ['class' => 'form-control' . ($errors->has('subcategoryId') ? ' is-invalid' : ''), 'placeholder' => 'Subcategoryid']) }}
+            {!! $errors->first('subcategoryId', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('abrevalorcat') }}
+            {{ Form::text('abrevalorcat', $valevaluation->abrevalorcat, ['class' => 'form-control' . ($errors->has('abrevalorcat') ? ' is-invalid' : ''), 'placeholder' => 'Abrevalorcat']) }}
+            {!! $errors->first('abrevalorcat', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('nombreValorcat') }}
             {{ Form::text('nombreValorcat', $valevaluation->nombreValorcat, ['class' => 'form-control' . ($errors->has('nombreValorcat') ? ' is-invalid' : ''), 'placeholder' => 'Nombrevalorcat']) }}
             {!! $errors->first('nombreValorcat', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('categoryId') }}
-            {{ Form::text('categoryId', $valevaluation->categoryId, ['class' => 'form-control' . ($errors->has('categoryId') ? ' is-invalid' : ''), 'placeholder' => 'Categoryid']) }}
-            {!! $errors->first('categoryId', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>

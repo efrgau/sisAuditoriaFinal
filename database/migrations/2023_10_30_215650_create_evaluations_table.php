@@ -15,8 +15,10 @@ class CreateEvaluationsTable extends Migration
     {
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('factoryId');
             $table->unsignedBigInteger('valEvaluationId');
             $table->integer('value')->nullable();
+            $table->foreign('factoryId')->references('id')->on('factories')->onDelete('cascade');
             $table->foreign('valEvaluationId')->references('id')->on('valevaluations')->onDelete('cascade');
             $table->timestamps();
         });

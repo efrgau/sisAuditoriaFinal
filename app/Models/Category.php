@@ -19,29 +19,32 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Category extends Model
 {
-    
-    static $rules = [
-		'NombreCategoria' => 'required',
-		'NombreISO' => 'required',
-    ];
 
-    protected $perPage = 20;
+  static $rules = [
+    'NombreCategoria' => 'required',
+    'NombreISO' => 'required',
+  ];
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['NombreCategoria','NombreISO'];
+  protected $perPage = 20;
+
+  /**
+   * Attributes that should be mass-assignable.
+   *
+   * @var array
+   */
+  protected $fillable = ['NombreCategoria', 'NombreISO'];
 
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function valevaluations()
-    {
-        return $this->hasMany('App\Models\Valevaluation', 'categoryId', 'id');
-    }
-    
+  /**
+   * @return \Illuminate\Database\Eloquent\Relations\HasMany
+   */
+  public function valevaluations()
+  {
+    return $this->hasMany('App\Models\Valevaluation', 'categoryId', 'id');
+  }
 
+  public function subcategories()
+  {
+    return $this->hasMany('App\Models\Subcategory', 'categoryId', 'id');
+  }
 }

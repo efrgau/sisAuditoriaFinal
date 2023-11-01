@@ -37,7 +37,7 @@ class UsersController extends Controller
         $user = User::create($request->all());
 
         return redirect()->route('components.users.verusuario')
-            ->with('success', 'Subcategory created successfully.');
+            ->with('success', 'Usuario creado satisfactoriamente.');
     }
     public function updateUser()
     {

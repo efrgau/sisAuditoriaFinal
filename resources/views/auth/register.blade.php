@@ -66,8 +66,8 @@
                                         value="{{ old('celular') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Correo electrónico:</label>
-                                    <input type="text" name="email" class="au-input au-input--full"
+                                    <label for="">Correo electrónico:</label>
+                                    <input type="email" name="email" class="au-input au-input--full"
                                         value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">

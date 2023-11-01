@@ -10,6 +10,8 @@ use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\UsersController;
 use App\Http\Controllers\IsoController;
 use App\Http\Controllers\AyudaController;
+use App\Http\Controllers\ProfileController;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,7 @@ use App\Http\Controllers\AyudaController;
 */
 
 ## TO DO
-#EDWIN ṔACHECO FIGUEROA 
+# 
 
 # Rutas para el manejo de logueo, registro y reseteo de contraseña del sistema
 Route::get('/', [LoginController::class, 'show']);
@@ -35,18 +37,24 @@ Route::get('/home', [HomeController::class, 'index'])->name('inicio');
 ## ROUTING A MODULO USUARIOS
 #Registro de usuarios en el sistema con espera de aprobación.
 Route::get('/registrarUsuario', [RegisterController::class, 'registraUsuario'])->name('registraUsuario');
+
 #Registra un nuevo usuario en el sistema para aprobación
 Route::post('/register', [RegisterController::class, 'register']);
+
 #Salida del usuario del logout
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
 #Editar Perfil del usuario
-Route::get('/editarPerfil', [UserController::class, 'editProfile'])->name('editarPerfil');
+Route::resource('profiles', \App\Http\Controllers\ProfileController::class);
 
 #Ver Lista de usuarios del sistema
 Route::get('/listaUsuarios', [UsersController::class, 'show'])->name('listaUsuarios');
 Route::get('/registrarUsuarioNuevo', [UsersController::class, 'createUserForm'])->name('registrarUsuarioNuevo');
 Route::get('/Users/VerUsuario', [UsersController::class, 'showUser'])->name('VerUsuario');
+
+#ver Lista de usuarios del sistema
 Route::resource('users', \App\Http\Controllers\user\UsersController::class);
+
 #Ver Lista de roles de usuarios del sistema
 Route::resource('roles', \App\Http\Controllers\RoleController::class);
 

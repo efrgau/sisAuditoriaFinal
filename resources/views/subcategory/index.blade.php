@@ -57,10 +57,10 @@
                                                             <form
                                                                 action="{{ route('subcategories.destroy', $subcategory->id) }}"
                                                                 method="POST">
-                                                                <a class="btn btn-sm btn-primary "
-                                                                    href="{{ route('subcategories.show', $subcategory->id) }}"><i
-                                                                        class="fa fa-fw fa-eye"></i>
-                                                                    {{ __('Ver') }}</a>
+                                                                <!-- <a class="btn btn-sm btn-primary "
+                                                                        href="{{ route('subcategories.show', $subcategory->id) }}"><i
+                                                                            class="fa fa-fw fa-eye"></i>
+                                                                        {{ __('Ver') }}</a> -->
                                                                 <a class="btn btn-sm btn-success"
                                                                     href="{{ route('subcategories.edit', $subcategory->id) }}"><i
                                                                         class="fa fa-fw fa-edit"></i>

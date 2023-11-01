@@ -94,7 +94,8 @@
         </div>
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Guardar Evaluación') }}</button>
+        <a href="{{ url('/informeEvaluacion') }}"
+            class="btn btn-primary">{{ __('Guardar Evaluación y ver informe') }}</a>
     </div>
     </div>
 </form>

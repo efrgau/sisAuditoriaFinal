@@ -219,7 +219,8 @@
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="{{ route('editarPerfil') }}">
+                                                    <a
+                                                        href="{{ route('profiles.show', ['profile' => Auth::user()->id]) }}">
                                                         <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
                                                 <!--

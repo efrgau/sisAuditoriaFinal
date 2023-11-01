@@ -51,32 +51,32 @@
                                 @csrf
                                 @include('layout.partials.messages')
                                 <div class="form-group">
-                                    <label for="">Nombre y apellidos</label>
+                                    <label for="name">Nombre y apellidos</label>
                                     <input type="text" name="name" class="au-input au-input--full"
                                         value="{{ old('name') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Número de identificación</label>
-                                    <input type="text" name="identification" class="au-input au-input--full"
+                                    <label for="identification">Número de identificación</label>
+                                    <input type="number" name="identification" class="au-input au-input--full"
                                         value="{{ old('identification') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Celular</label>
-                                    <input type="text" name="celular" class="au-input au-input--full"
+                                    <label for="celular">Celular</label>
+                                    <input type="number" name="celular" class="au-input au-input--full"
                                         value="{{ old('celular') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Correo electrónico:</label>
+                                    <label for="email">Correo electrónico:</label>
                                     <input type="email" name="email" class="au-input au-input--full"
                                         value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Contraseña:</label>
+                                    <label for="password">Contraseña:</label>
                                     <input type="password" name="password" class="au-input au-input--full"
                                         value="{{ old('password') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Confirmar contraseña:</label>
+                                    <label for="password">Confirmar contraseña:</label>
                                     <input type="password" name="password_confirmation" class="au-input au-input--full"
                                         value="{{ old('password_confirmation') }}">
                                 </div>

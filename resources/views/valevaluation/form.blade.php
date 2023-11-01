@@ -1,6 +1,6 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
+
         <div class="form-group">
             {{ Form::label('subcategoryId') }}
             {{ Form::text('subcategoryId', $valevaluation->subcategoryId, ['class' => 'form-control' . ($errors->has('subcategoryId') ? ' is-invalid' : ''), 'placeholder' => 'Subcategoryid']) }}
@@ -19,6 +19,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <a href="{{ url('/informeEvaluacion') }}" class="btn btn-primary">{{ __('Submit') }}</a>
     </div>
 </div>

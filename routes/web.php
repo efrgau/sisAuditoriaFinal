@@ -37,7 +37,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('inicio');
 ## ROUTING A MODULO USUARIOS
 #Registro de usuarios en el sistema con espera de aprobación.
 Route::get('/registrarUsuario', [RegisterController::class, 'registraUsuario'])->name('registraUsuario');
-
 #Registra un nuevo usuario en el sistema para aprobación
 Route::post('/register', [RegisterController::class, 'register']);
 

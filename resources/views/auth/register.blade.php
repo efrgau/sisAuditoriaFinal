@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Correo electrónico:</label>
-                                    <input type="email" name="email" class="au-input au-input--full"
+                                    <input type="text" name="email" class="au-input au-input--full"
                                         value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">

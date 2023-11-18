@@ -32,7 +32,7 @@ class RegisterController extends Controller
             'email' => $request->email,
             'identification' => $request->identification,
             'celular' => $request->celular,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
 
         return redirect('/login')->with('success', 'Registro exitoso');

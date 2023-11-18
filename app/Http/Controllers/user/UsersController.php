@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
@@ -27,17 +29,28 @@ class UsersController extends Controller
     }
     public function createUserForm()
     {
-        return view('users.registrousuario');
+        $user = new User();
+        $roles = Role::pluck('name', 'id');
+        return view('users.registrousuario', compact('user', 'roles'));
         //Permite crear un usuario teniendo permisos de administrador
     }
     public function store(Request $request)
     {
-        //request()->validate(Subcategory::$rules);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
 
-        $user = User::create($request->all());
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'identification' => $request->identification,
+            'celular' => $request->celular,
+            'password' => $request->password,
+        ]);
 
-        return redirect()->route('components.users.verusuario')
-            ->with('success', 'Usuario creado satisfactoriamente.');
+        return redirect('/listausuarios')->with('success', 'Registro exitoso');
     }
     public function updateUser()
     {
